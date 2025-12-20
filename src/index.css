@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+@font-face {
+  font-family: "Telegraf";
+  src: url("./assets/fonts/TelegrafRegular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Telegraf";
+  src: url("./assets/fonts/TelegrafUltraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* custom scrollbar */
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #131418;
+  border-radius: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* custom scrollbar end */
+
+/* DASHBOARD HOMEPAGE SCROLLBAR*/
+
+.homepage-scrollbar::-webkit-scrollbar {
+  width: 12px; /* Track width */
+}
+
+.homepage-scrollbar::-webkit-scrollbar-track {
+  background: #444447;
+}
+
+.homepage-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+  border: 3px solid #444447; /* Make thumb thinner by adding border */
+}
+
+.homepage-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Add single button at each end */
+.homepage-scrollbar::-webkit-scrollbar-button:single-button {
+  display: block;
+  height: 12px;
+  background: #666;
+  border-radius: 2px;
+}
+
+/* Styling for up button */
+.homepage-scrollbar::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background: #444447
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6"><path d="M 0,6 L 12,6 L 6,0 z" fill="%23aaa"/></svg>')
+    no-repeat center;
+}
+
+/* Styling for down button */
+.homepage-scrollbar::-webkit-scrollbar-button:single-button:vertical:increment {
+  background: #444447
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6"><path d="M 0,0 L 12,0 L 6,6 z" fill="%23aaa"/></svg>')
+    no-repeat center;
+}
+
+/* Hover state for buttons */
+.homepage-scrollbar::-webkit-scrollbar-button:single-button:hover {
+  background-color: #777;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* .prose-privacy strong {
+  color: #FFD700; 
+  font-weight: bold; 
+} */
+
+ 
+
+    /* ::selection {
+      background-color: #ff000d; 
+      color: black;
+    } */
+

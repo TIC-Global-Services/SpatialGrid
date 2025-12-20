@@ -1,0 +1,21 @@
+import React, { useEffect } from 'react'
+import { imagePath } from '../utils/imagePath'
+
+const Creme21 = () => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      window.location.href = 'https://creme21.8thwall.app/arexperience/';
+    }, 500); 
+
+    // Optional: Clear timeout if component unmounts before 5s
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className='flex justify-center items-center h-screen'>
+      {/* <img className='max-w-[350px]' src={imagePath?.creme21} alt="Creme21 Logo" /> */}
+    </div>
+  )
+}
+
+export default Creme21;

@@ -1,0 +1,424 @@
+/* .add_content>*{
+  flex: 1;
+} */
+.left_section {
+  border-radius: 12px;
+  height: calc(100% - 20px);
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 11;
+  /* width: 250px; */
+}
+
+/* .addmesh button {
+  width: 35px;
+  height: 35px;
+  color: #00798a;
+}
+.addmesh button:hover{
+  border: 1px solid #1e8193;
+  background-color: #1e8193;
+  color: #ffffff;
+} */
+
+.preview_here svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* .preview_here button {
+  padding: 5px !important;
+} */
+
+.canvas-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.grid_objects_list {
+  width: 100%;
+  position: relative;
+}
+
+.grid_objects_list > * {
+  padding-left: 10px;
+}
+
+.grid_objects_list button {
+  border: 0px;
+  padding: 0.3em 0em;
+  /* padding-left: 20px; */
+  background-color: transparent;
+  transition: border-color 0.25s;
+  color: #000000;
+  width: 100%;
+  text-align: left;
+  box-shadow: none;
+  border-radius: 8px !important;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  /* font-size: 14px; */
+  font-weight: 400;
+}
+
+/* .grid_objects_list button:hover{
+  background-color: #f8f8f8;
+} */
+
+/*Right section*/
+.right_section {
+  border-radius: 12px;
+  height: calc(100% - 20px);
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 11;
+  /* width: 300px; */
+}
+
+.setting_head {
+  float: left;
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 0px;
+  font-weight: 500;
+}
+.input_entry {
+  border: solid;
+  border-width: 0px;
+  border-radius: 10px;
+}
+.input_values {
+  width: 55px;
+  height: 30px;
+  margin: 0px 0px 0px 5px;
+}
+
+.input_image {
+  width: 25px;
+  height: 25px;
+  margin: 0px 0px 0px 5px;
+}
+/*End of right section*/
+
+.top_section {
+  width: 30%;
+  color: #000000;
+  padding: 10px 0%;
+  margin: 0px auto;
+  position: fixed;
+  transform: translate(-50%, 0px);
+  left: 50%;
+  top: 0;
+  z-index: 1;
+}
+
+.editor_home {
+  cursor: pointer;
+  height: 45px !important;
+  align-items: center;
+  display: flex;
+  transition: all 0.25s ease;
+}
+
+.editor_home:hover {
+  filter: contrast(200%);
+}
+
+.editor_home img {
+  width: 25px;
+  float: left;
+  margin-top: -2px;
+}
+
+#gridContainer {
+  position: fixed;
+  z-index: 0;
+  height: 100%;
+  top: 0px;
+  left: 00px;
+  width: 100%;
+  background: #f2f2f7;
+}
+canvas {
+  /* width: calc(100% - 0px) !important;
+  height: auto !important; */
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: absolute;
+}
+
+.additional_uploads {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+}
+
+.topright {
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 10px 0%px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.play_pause {
+  float: left;
+  width: 40%;
+  margin-right: 10%;
+}
+.play_pause button {
+  float: right;
+}
+
+.control_buttons {
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  width: 60px;
+  right: 195px;
+  border-radius: 15px;
+  top: 96px;
+  /* background: #f8f8f8; */
+  padding: 10px;
+}
+
+.control_buttons button {
+  width: 30px !important;
+  height: 30px !important;
+  margin-bottom: 15px !important;
+}
+.control_buttons button:last-child {
+  margin-bottom: 0px !important;
+}
+.control_buttons button img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: -5px;
+}
+.control_buttons button:hover {
+  border: 1px solid #f8f8f8;
+  background-color: #e6e6e6;
+  color: #ffffff;
+}
+
+/* shortcuts */
+.keyboard_shorts {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 175px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+}
+.shots_head {
+  float: left;
+  width: 100%;
+}
+.shorts_list {
+  float: left;
+  width: 100%;
+}
+.shorts_list ul {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.shorts_list ul li {
+  float: left;
+  width: calc(100% - 20px);
+  display: list-item;
+  margin-left: 20px;
+  font-size: 14px;
+  padding: 1px;
+}
+
+/* popupImage style */
+
+/* #popupImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  display: none;
+} */
+
+/* ------------------------------- */
+
+/* popupModel style */
+
+/* ------------------------------- */
+
+/* popupVideo style */
+
+/* ------------------------------- */
+
+.centered-input-container {
+  display: inline-block;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Tittle  */
+
+.top-left-text {
+  position: absolute;
+  top: 0;
+  padding: 10px;
+  color: #000000;
+  z-index: 10;
+  font-size: 20;
+  font-weight: bold;
+  left: 50px;
+  font-size: x-large;
+}
+
+/* Image Popup */
+.popupasset {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto; /* Adjust width as needed or use max-width for responsiveness */
+  max-width: 90%; /* Ensure it doesn't stretch too wide on larger screens */
+  padding: 20px;
+  background: white; /* Consider adding a gradient or subtle background image */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  display: none; /* Only show when needed */
+  z-index: 1000; /* Ensure it's above other content */
+  overflow: hidden; /* Keeps the child elements contained */
+  text-align: center;
+}
+
+.popupasset h2 {
+  margin-bottom: 30px;
+  text-align: center; /* Center the title */
+}
+
+.popupasset input[type='file'] {
+  width: 100%; /* Full width minus padding */
+  margin-bottom: 15px; /* Space below the input */
+}
+
+.popupasset button {
+  display: inline-block; /* Allows for button resizing */
+  width: auto; /* Auto width based on content */
+  padding: 8px 20px; /* Comfortable padding */
+  margin-top: 10px; /* Space above the button */
+  background-color: #9797a5; /* Theme color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s; /* Smooth transition for hover effect */
+}
+
+.popupasset button:hover {
+  background-color: transparent; /* Darker on hover */
+  background: linear-gradient(90.16deg, #269fb0 0.14%, #0b3a4e 99.88%);
+}
+
+/* Accessibility improvements */
+.popupasset button:focus {
+  outline: 2px solid #0056b3; /* Focus outline for keyboard navigation */
+}
+
+.cancel_up {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.cancel_up:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the logo */
+#logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: auto;
+  height: 40px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.logo {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
+
+/* Hide the up and down arrows */
+.custom-number-input::-webkit-inner-spin-button,
+.custom-number-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*additional infor*/
+.additional_info {
+  position: fixed;
+  bottom: 20px;
+  left: 280px;
+  z-index: 10;
+}
+
+.additional_info ul li {
+  color: #9e9c9c;
+  list-style: none;
+}
+
+/* Scrollbar css  */
+
+.swiper_slider_new .swiper {
+  overflow: visible;
+}
+
+nav h2 {
+  cursor: pointer;
+}
+
+/* .joinUsBg {
+  background-position: center 0%;
+}
+@media (min-width: 640px) {
+  .joinUsBg {
+    background-position: center -10%;
+  }
+}
+@media (min-width: 768px) {
+  .joinUsBg {
+    background-position: center -30%;
+  }
+}
+@media (min-width: 1024px) {
+  .joinUsBg {
+    background-position: center -50%;  }
+} */

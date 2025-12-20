@@ -1,0 +1,27 @@
+.app-sub-right-section-container {
+  background-color: #131418 !important;
+  width: 44px;
+  height: 131px;
+  border-radius: 10px;
+  /* Changed from 10px to 30px */
+}
+
+.app-sub-right-section {
+  background-color: transparent;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
+  border-radius: 10px !important;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.app-sub-right-img {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+  /* transform: scale(1.2); */
+}
