@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import XRSection from '../components/HomePage/XRSection';
-import EnterpriseImpact from '../components/HomePage/EnterpriseImpact';
-import VisualEditer from '../components/HomePage/VisualEditer';
-import XRSolutions from '../components/HomePage/XRSolutions';
-import FAQSection from '../components/HomePage/FAQSection';
+import FAQSection from '../components/3D_Home/FAQSection';
 import GetStartedSection from '../components/HomePage/GetStartedSection';
 import Modal from '../components/ui/Modal';
 import { ModalDefaultComponent } from '../components/ui/UtilsLayout';
 import ButtonComponent from '../components/ui/ButtonComponent';
-import NavbarComponent from '../components/HomePage/NavBarComponent';
-import SequenceHero from '../components/3D_Home/SequenceHero';
 import CanvasSequenceHero from '../components/3D_Home/ImageSequenceHero';
-import HeroSection from '../components/Reusable/HeroSection';
 import BackgroundWrapper from '../components/Reusable/BackgroundWrapper';
+import SpatialEngineering from '../components/3D_Home/SpatialEngineering';
+import EnterpriseImpact from '../components/3D_Home/EnterpriseImpact';
+import Companies from '../components/3D_Home/Companies';
+import Testimonials from '../components/3D_Home/Testimonials';
 
 const Home = () => {
   const [open, setOpen] = useState(false);
@@ -31,18 +28,20 @@ const Home = () => {
   };
 
   return (
-    <div className="h-full bg-[#121316] flex flex-col min-h-screen max-w-[100vw] overflow-hidden relative custom-scrollbar">
-      {/* <NavbarComponent /> */}
+    <div className="h-full bg-black flex flex-col min-h-screen max-w-[100vw] overflow-hidden relative custom-scrollbar">
+
       {/* <SequenceHero /> */}
       <CanvasSequenceHero />
+
       <BackgroundWrapper>
-        <XRSection />
+        <div className=' pt-36' />
+        <SpatialEngineering />
         <EnterpriseImpact />
-        <VisualEditer />
       </BackgroundWrapper>
-      <XRSolutions />
+      <Companies />
+      <Testimonials />
       <FAQSection />
-      <GetStartedSection />
+      {/* <GetStartedSection /> */}
 
       {/* Modal for alert message */}
       <Modal isOpen={open} closeModal={closeModal}>

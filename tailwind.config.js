@@ -6,7 +6,7 @@ module.exports = {
         '6xl': '72rem',
       },
       colors: {
-        'primary': '#D51211',
+        primary: '#D51211',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
@@ -14,7 +14,7 @@ module.exports = {
         anybody: ['Anybody', 'cursive'],
         questrial: ['Questrial', 'sans-serif'], // ✅ Added Questrial font
 
-        telegraf: ['Telegraf']
+        telegraf: ['Telegraf'],
       },
       fontWeight: {
         thin: '100',
@@ -25,8 +25,22 @@ module.exports = {
         bold: '700',
         extrabold: '800',
       },
+      animation: {
+        'star-movement-bottom':
+          'star-movement-bottom linear infinite alternate',
+        'star-movement-top': 'star-movement-top linear infinite alternate',
+      },
+      keyframes: {
+        'star-movement-bottom': {
+          '0%': { transform: 'translate(0%, 0%)', opacity: '1' },
+          '100%': { transform: 'translate(-100%, 0%)', opacity: '0' },
+        },
+        'star-movement-top': {
+          '0%': { transform: 'translate(0%, 0%)', opacity: '1' },
+          '100%': { transform: 'translate(100%, 0%)', opacity: '0' },
+        },
+      },
     },
-    
   },
   plugins: [],
 };

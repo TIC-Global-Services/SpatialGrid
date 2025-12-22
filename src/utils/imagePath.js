@@ -349,6 +349,24 @@ import OurTeam from '../assets/icons/about/our-team.svg';
 import OpenPositions from '../assets/icons/about/open-positions.svg';
 import ContactUs from '../assets/icons/about/contact-us.svg';
 
+//Editor
+
+import VisualEditorDesign from '../assets/images/img/Editor/Visual-Editor-Design.png';
+import Flight from '../assets/images/img/Flight.png';
+
+//Companies
+import BrandPower from '../assets/images/img/Companies/Brand_Power.png';
+import Medha from '../assets/images/img/Companies/Medha.png';
+import MinistryOfDefence from '../assets/images/img/Companies/Ministry-of-defence.png';
+import Raghava from '../assets/images/img/Companies/raghava_logo.png';
+import ISRO from '../assets/images/img/Companies/isra.png';
+import SCCL from '../assets/images/img/Companies/sccl.png';
+import NRSC from '../assets/images/img/Companies/nrsc.png';
+import RST from '../assets/images/img/Companies/rst.png';
+import Creme21 from '../assets/images/img/Companies/creme_21.png';
+import Americana from '../assets/images/img/Companies/americana.png';
+import LifeSciences from '../assets/images/img/Companies/life_sciences.png';
+
 
 
 // export const addcomponent = {
@@ -405,6 +423,7 @@ export const imagePath = {
   com8,
   com9,
   com10,
+
   // group101Image,
   // group102Image,
   // group103Image,
@@ -453,7 +472,25 @@ export const imagePath = {
   gridmountain,
   JoinUsImg,
   creme21,
+
+
+  //TIC 
+
+  //Companies
+  BrandPower,
+  Medha,
+  MinistryOfDefence,
+  Raghava,
+  ISRO,
+  SCCL,
+  NRSC,
+  RST,
+  Creme21,
+  Americana, 
+  LifeSciences
+  
 };
+
 const cocos = `${process.env.REACT_APP_IMAGE_BASE_URL}uploads/static-images-frontend/cocos.mp4`;
 
 const education = `${process.env.REACT_APP_IMAGE_BASE_URL}uploads/spatialgrid-videos/heart.mp4`;
@@ -665,5 +702,10 @@ export const iconsPath = {
   Press,
   OurTeam,
   OpenPositions,
-  ContactUs
+  ContactUs,
+
+  //Editor
+  VisualEditorDesign,
+  Flight,
+
 };

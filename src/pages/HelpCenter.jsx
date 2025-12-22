@@ -6,8 +6,8 @@ import {
   HelpCenterPlanData,
   trandingTopics,
 } from '../utils/constant';
-import FAQSection from '../components/HomePage/FAQSection';
 import { useNavigate } from 'react-router-dom';
+import FAQSection from '../components/3D_Home/FAQSection';
 
 const HelpCenter = () => {
   const navigate = useNavigate();
@@ -72,15 +72,7 @@ const HelpCenter = () => {
       </Section>
 
       {/* FAQ Section */}
-      <FAQSection
-        title={
-          <div className="text-[clamp(1.5rem,3vw,2.5rem)] text-center py-10 font-medium">
-            Frequently Asked Questions
-          </div>
-        }
-        containerClass="w-full"
-        gridClass="grid grid-cols-1 xl:grid-cols-2 gap-8"
-      />
+      <FAQSection />
     </div>
   );
 };

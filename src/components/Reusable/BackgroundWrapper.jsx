@@ -33,7 +33,7 @@ const BackgroundWrapper = ({ children, className = '', glowColor = '#EE2B2A' }) 
           `,
           backgroundSize: '50px 50px',
           backgroundPosition: 'center',
-          opacity: 0.9, // Ensures grid is visible even without mouse
+          opacity: 0.7, // Ensures grid is visible even without mouse
         }}
       />
 
