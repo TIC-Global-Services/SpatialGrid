@@ -79,7 +79,7 @@ const EnterpriseImpact = () => {
         src={iconsPath.Flight}
         alt="Flight"
         style={{ x, y, scale }}
-        className="absolute -left-[10%] top-[15%] w-[600px] max-w-none pointer-events-none z-0 will-change-transform"
+        className="absolute -left-[10%] top-[10%] w-[600px] max-w-none pointer-events-none z-0 will-change-transform"
       />
 
       {/* CARDS */}
@@ -88,7 +88,7 @@ const EnterpriseImpact = () => {
           <div
             key={idx}
             className={`bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 text-white border border-[#322F2F] flex flex-col items-start gap-4 px-6 py-8 rounded-md h-[250px]
-              ${idx === 1 ? 'mt-24' : idx === 2 ? 'mt-44' : ''}
+              ${idx === 1 ? 'mt-32' : idx === 2 ? 'mt-64' : ''}
             `}
           >
             <div className="bg-[#262424] px-3 py-2 rounded-md">

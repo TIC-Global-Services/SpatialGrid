@@ -22,6 +22,7 @@ const Careers = () => {
                 Why Work at Spatial Grid?
               </button>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2">
               {array1Card.map(({ title, desc }, ind) => (
                 <FirstCard

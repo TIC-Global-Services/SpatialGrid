@@ -277,7 +277,6 @@ canvas {
 }
 
 /* Tittle  */
-
 .top-left-text {
   position: absolute;
   top: 0;
@@ -404,6 +403,73 @@ canvas {
 nav h2 {
   cursor: pointer;
 }
+
+
+.blog-markdown h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.blog-markdown h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-markdown p {
+  color: #d1d5db;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.blog-markdown ul,
+.blog-markdown ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-markdown li {
+  list-style: disc;
+  margin-bottom: 0.5rem;
+  color: #d1d5db;
+}
+
+.blog-markdown ol li {
+  list-style: decimal;
+}
+
+.blog-markdown strong {
+  color: white;
+  font-weight: 600;
+}
+
+.blog-markdown em {
+  font-style: italic;
+}
+
+.blog-markdown hr {
+  border: none;
+  border-top: 1px solid #374151;
+  margin: 3rem 0;
+}
+
+.blog-markdown blockquote {
+  border-left: 3px solid #ef4444;
+  padding-left: 1rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #e5e7eb;
+}
+
+.blog-markdown a {
+  color: #ef4444;
+  text-decoration: underline;
+}
+
+
 
 /* .joinUsBg {
   background-position: center 0%;

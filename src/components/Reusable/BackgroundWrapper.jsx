@@ -50,9 +50,9 @@ const BackgroundWrapper = ({ children, className = '', glowColor = '#EE2B2A' }) 
             backgroundPosition: 'center',
             opacity: 0.9,
             mixBlendMode: 'screen',
-            maskImage: `radial-gradient(circle 700px at ${mousePosition.x}% ${mousePosition.y}%, black 0%, transparent 65%)`,
+            maskImage: `radial-gradient(circle 400px at ${mousePosition.x}% ${mousePosition.y}%, black 0%, transparent 65%)`,
             maskSize: '100% 100%',
-            WebkitMaskImage: `radial-gradient(circle 700px at ${mousePosition.x}% ${mousePosition.y}%, black 0%, transparent 65%)`,
+            WebkitMaskImage: `radial-gradient(circle 400px at ${mousePosition.x}% ${mousePosition.y}%, black 0%, transparent 65%)`,
             WebkitMaskSize: '100% 100%',
           }}
         />

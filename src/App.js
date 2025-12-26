@@ -27,6 +27,8 @@ import Privacy_Policy from './pages/Privacy-Policy';
 import TermsConditions from './pages/Terms-&-conditions';
 import AirPurifierAdmin from './pages/AirPurifierAdmin';
 import AirPurifier from './pages/AirPurifierUser';
+import Blogs from './pages/Blogs';
+import BlogDetail from './pages/DynamicBlogContent';
 
 const ScrollTop = ({ children }) => {
   const location = useLocation();
@@ -46,6 +48,8 @@ const App = () => {
         {/* <Route path="/login" element={<Login />} /> */}
         <Route element={<LayoutHome />}>
           <Route path="/" element={<Home />} />
+          <Route path="/resource/blogs" element={<Blogs />} />
+          <Route path="/resource/blogs/:slug" element={<BlogDetail />} />
 
           <Route path="/help-center" element={<HelpCenter />} />
           <Route path="/help-center-level-II" element={<HelpCenterLevelII />} />

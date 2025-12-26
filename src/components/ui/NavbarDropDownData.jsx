@@ -104,9 +104,10 @@ export const RESOURCES_DROPDOWN_DATA = [
     items: [
       {
         title: "Spatial Grid Blog",
+        path: "/resource/blogs",
         icon: iconsPath.HelpCenter,
         description: "Insights on XR, AI, and spatial computing.",
-        comingSoon: true,
+        
       },
       {
         title: "Spatial Grid Research",

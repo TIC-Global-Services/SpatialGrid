@@ -11,6 +11,7 @@ import SpatialEngineering from '../components/3D_Home/SpatialEngineering';
 import EnterpriseImpact from '../components/3D_Home/EnterpriseImpact';
 import Companies from '../components/3D_Home/Companies';
 import Testimonials from '../components/3D_Home/Testimonials';
+import XRSolutions from '../components/3D_Home/XRSolutions';
 
 const Home = () => {
   const [open, setOpen] = useState(false);
@@ -35,6 +36,7 @@ const Home = () => {
 
       <BackgroundWrapper>
         <div className=' pt-36' />
+        <XRSolutions />
         <SpatialEngineering />
         <EnterpriseImpact />
       </BackgroundWrapper>
