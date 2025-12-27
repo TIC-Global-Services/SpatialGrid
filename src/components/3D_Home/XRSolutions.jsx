@@ -27,7 +27,7 @@ const content = [
     imgSrc: '/XR_PLACEHOLDER.png',
   },
   {
-    
+
     title: 'Asset Simulation ',
     percentage: '90%',
     descTitle: 'Increase in Procedural Accuracy',
@@ -65,7 +65,7 @@ export default function XRSolutions() {
       invalidateOnRefresh: true,
       refreshPriority: 90,
       fastScrollEnd: true,
-      markers: true,
+      // markers: true,
       onUpdate: (self) => {
         const index = Math.min(
           Math.floor(self.progress * content.length),
