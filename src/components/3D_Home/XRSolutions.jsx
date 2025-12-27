@@ -27,6 +27,7 @@ const content = [
     imgSrc: '/XR_PLACEHOLDER.png',
   },
   {
+    
     title: 'Asset Simulation ',
     percentage: '90%',
     descTitle: 'Increase in Procedural Accuracy',

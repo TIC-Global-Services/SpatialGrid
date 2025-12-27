@@ -5,6 +5,7 @@ const BackgroundWrapper = ({ children, className = '', glowColor = '#EE2B2A' }) 
   const [isHovering, setIsHovering] = useState(false);
   const wrapperRef = useRef(null);
 
+  
   const handleMouseMove = (e) => {
     if (!wrapperRef.current) return;
 
