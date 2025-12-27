@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const TOTAL_FRAMES = 1485;
 const SCROLL_MULTIPLIER = 8;
 const IDLE_FRAMES = 119;
-const IDLE_FPS = 30;
+const IDLE_FPS = 30;  
 /* ========================================== */
 
 // Snap targets: start frame of each section
