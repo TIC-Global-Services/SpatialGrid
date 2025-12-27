@@ -5,9 +5,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 /* ================= CONFIG ================= */
-const TOTAL_FRAMES = 1347;
+const TOTAL_FRAMES = 1485;
 const SCROLL_MULTIPLIER = 8;
-const IDLE_FRAMES = 25;
+const IDLE_FRAMES = 119;
 const IDLE_FPS = 30;
 /* ========================================== */
 
@@ -18,14 +18,14 @@ const SNAP_TARGETS = [
 ];
 
 const FRAME_PATH = (i) =>
-  `/seq/frames/frame_${String(i + 1).padStart(4, '0')}.webp`;
+  `/updated_seq/frames/frame_${String(i + 1).padStart(4, '0')}.webp`;
 
 /* -------- CONTENT DEFINITIONS -------- */
 const CONTENT = [
   {
     id: '1',
     from: 0,
-    to: 70,
+    to: 170,
     title: 'Leading the Future of  immersive ',
     highlight: 'spatial model',
     desc: 'The Enterprise suit for Immersive Tech powered by Spatial AI and designed to ___________ across Industries.',
@@ -37,8 +37,8 @@ const CONTENT = [
   },
   {
     id: '2',
-    from: 80,
-    to: 140,
+    from: 195,
+    to: 285,
     title: 'Train Safer. Operate Smarter. Scale Faster',
     position: 'left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2',
     customStyle: ' items-center justify-center text-center ',
@@ -46,16 +46,16 @@ const CONTENT = [
   },
   {
     id: '3',
-    from: 185,
-    to: 200,
+    from: 310,
+    to: 350,
     desc: 'Spatial Grid delivers intelligent XR training platforms for complex, high-risk industries — oil & gas, pharma, agrochem. Adaptive environments, spatial models, and AI ensure mastery before mistakes.',
     position: ' left-[2%] md:left-[10%] top-[15%] ',
     descStyle: '  text-white md:max-w-md',
   },
   {
     id: '4',
-    from: 223,
-    to: 280,
+    from: 360,
+    to: 400,
     title:
       'From site tours to store fronts. From Showrooms to shelf space, Engage with ',
     highlight: 'immersion and drive conversion.',
@@ -65,16 +65,16 @@ const CONTENT = [
   },
   {
     id: '5',
-    from: 340,
-    to: 400,
+    from: 420,
+    to: 500,
     desc: 'Spatial Grid delivers intelligent XR training platforms for complex, high-risk industries — oil & gas, pharma, agrochem. Adaptive environments, spatial models, and AI ensure mastery before mistakes.',
     position: ' left-[15%] top-[25%] ',
     descStyle: '  text-white max-w-md',
   },
   {
     id: '6',
-    from: 490,
-    to: 580,
+    from: 595,
+    to: 720,
     title:
       'From site tours to store fronts. From Showrooms to shelf space, Engage with ',
     highlight: 'immersion and drive conversion.',
@@ -84,8 +84,8 @@ const CONTENT = [
   },
   {
     id: '7',
-    from: 770,
-    to: 800,
+    from: 900,
+    to: 920,
     desc: '(For real estate, FMCG, or F&B )— Immersive brand journeys now begin in XR. With AI-personalized walkthroughs, product interactions, and layered storytelling, Spatial Grid redefines engagement.',
     position: 'left-1/2 -translate-x-1/2 bottom-[20%] ',
     descStyle: '  text-white max-w-xl',
@@ -93,8 +93,8 @@ const CONTENT = [
   },
   {
     id: '8',
-    from: 850,
-    to: 910,
+    from: 980,
+    to: 1010,
     title:
       'Turning Lessons into Spatial Journeys. Beyond the page into the world. See it Feel it, understand it.',
     position: 'left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2',
@@ -103,18 +103,18 @@ const CONTENT = [
   },
   {
     id: '9',
-    from: 1040,
-    to: 1100,
+    from: 1157,
+    to: 1200,
     title:
       'Digital Twins, Simulating Ops- from cockpits to command centers, immersive superiority for Air, Land, Water and Space',
-    position: 'left-1/2 -translate-x-1/2 bottom-[20%] ',
+    position: 'left-1/2 -translate-x-1/2 bottom-[40%] ',
     customStyle: '  justify-center text-center items-center',
     headingStyle: '  max-w-3xl text-2xl md:text-3xl',
   },
   {
     id: '10',
-    from: 1285,
-    to: 1349,
+    from: 1385,
+    to: 1485,
     title: 'Spatial Grid – A Boundless Frontier for ',
     highlight: 'Immersive Spatial Models.',
     position: 'left-[10%] top-1/2 -translate-y-1/2  ',
@@ -265,12 +265,15 @@ const CanvasSequenceHero = () => {
     );
 
     const trigger = ScrollTrigger.create({
+      id: 'canvas-seq',
       trigger: sectionRef.current,
       start: 'top top',
       end: `+=${TOTAL_FRAMES * SCROLL_MULTIPLIER}`,
       scrub: true,
       pin: true,
       pinSpacing: true,
+      invalidateOnRefresh: true,
+      refreshPriority: 100,
       // snap: {
       //   snapTo: snapProgressValues,
       //   duration: 1,
@@ -279,21 +282,33 @@ const CanvasSequenceHero = () => {
       // },
       // snap: 0.05,
       onUpdate: (self) => {
-        const targetFrame = Math.floor(self.progress * TOTAL_FRAMES);
+        const clampedFrame = Math.min(
+          TOTAL_FRAMES - 1,
+          Math.max(0, Math.floor(self.progress * TOTAL_FRAMES))
+        );
 
-        // At top → idle loop
-        if (targetFrame === 0) {
+        // ▶ At TOP → idle animation
+        if (clampedFrame === 0) {
           if (!idleAnimationRef.current) startIdleAnimation();
           return;
         }
 
         stopIdleAnimation();
 
-        if (targetFrame !== frameRef.current) {
-          frameRef.current = targetFrame;
-          setFrame(targetFrame);
+        // ▶ At END → freeze on last frame
+        if (self.progress >= 0.999) {
+          frameRef.current = TOTAL_FRAMES - 1;
+          setFrame(TOTAL_FRAMES - 1);
+          draw(TOTAL_FRAMES - 1);
+          return;
+        }
+
+        // ▶ Normal scroll
+        if (clampedFrame !== frameRef.current) {
+          frameRef.current = clampedFrame;
+          setFrame(clampedFrame);
           rafRef.current && cancelAnimationFrame(rafRef.current);
-          rafRef.current = requestAnimationFrame(() => draw(targetFrame));
+          rafRef.current = requestAnimationFrame(() => draw(clampedFrame));
         }
       },
     });
@@ -355,7 +370,10 @@ const CanvasSequenceHero = () => {
                 >
                   {b.title}
                   {b.highlight && (
-                    <span className="text-primary font-telegraf"> {b.highlight}</span>
+                    <span className="text-primary font-telegraf">
+                      {' '}
+                      {b.highlight}
+                    </span>
                   )}
                 </h1>
               )}

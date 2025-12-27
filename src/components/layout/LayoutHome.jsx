@@ -10,7 +10,7 @@ import FooterSection from './FooterSection';
  */
 const LayoutHome = () => {
   return (
-    <div className="h-full bg-black flex flex-col min-h-screen max-w-[100vw] overflow-hidden relative">
+    <div className="h-full bg-black flex flex-col min-h-screen max-w-[100vw] relative">
       {/* Navbar Component */}
       <NavbarComponent />
 

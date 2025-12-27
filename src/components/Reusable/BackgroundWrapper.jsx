@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 
 const BackgroundWrapper = ({ children, className = '', glowColor = '#EE2B2A' }) => {
   const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
@@ -18,7 +18,7 @@ const BackgroundWrapper = ({ children, className = '', glowColor = '#EE2B2A' }) 
   return (
     <div
       ref={wrapperRef}
-      className={`relative overflow-hidden bg-black ${className}`}
+      className={`relative bg-black ${className}`}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       onMouseMove={handleMouseMove}

@@ -16,20 +16,20 @@ const EnterpriseImpact = () => {
    */
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ['start start', 'end start'],
+    offset: ['start 60%', 'end start'],
   });
 
   /** Map scroll progress → transforms */
   const x = useTransform(
     scrollYProgress,
     [0, 1],
-    isDesktop ? ['0%', '120%'] : ['0%', '60%']
+    isDesktop ? ['0%', '220%'] : ['0%', '60%']
   );
 
   const y = useTransform(
     scrollYProgress,
     [0, 1],
-    isDesktop ? ['0%', '70%'] : ['0%', '40%']
+    isDesktop ? ['0%', '140%'] : ['0%', '40%']
   );
 
   const scale = useTransform(
@@ -79,7 +79,7 @@ const EnterpriseImpact = () => {
         src={iconsPath.Flight}
         alt="Flight"
         style={{ x, y, scale }}
-        className="absolute -left-[10%] top-[10%] w-[600px] max-w-none pointer-events-none z-0 will-change-transform"
+        className="absolute -left-[10%] top-[0%] w-[600px] max-w-none pointer-events-none z-0 will-change-transform"
       />
 
       {/* CARDS */}
