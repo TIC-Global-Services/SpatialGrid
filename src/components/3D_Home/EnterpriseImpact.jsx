@@ -56,7 +56,7 @@ const EnterpriseImpact = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative min-h-screen w-full flex flex-col gap-16 justify-center px-4 md:px-10 py-10"
+      className="relative min-h-screen w-full flex flex-col gap-16 justify-center px-4 md:px-10 py-10 overflow-x-hidden"
     >
       {/* HEADER */}
       <div className="max-w-5xl text-center mx-auto space-y-4">
