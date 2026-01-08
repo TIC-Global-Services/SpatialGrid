@@ -18,6 +18,7 @@ const NavbarComponent = React.memo(() => {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [formError, setFormError] = useState('');
   const [selectedTitle, setSelectedTitle] = useState(null);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   // Form validation states
   const [fieldErrors, setFieldErrors] = useState({
@@ -110,6 +111,19 @@ const NavbarComponent = React.memo(() => {
 
     return Object.values(errors).every((error) => error === '');
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Run once on mount (important!)
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -279,7 +293,15 @@ const NavbarComponent = React.memo(() => {
 
   return (
     <>
-      <nav className=" px-6 py-4 fixed top-4 md:top-6 left-10 right-10 max-w-7xl z-[9990] mx-auto rounded-3xl">
+      <nav
+        className={`
+    px-6 py-4 fixed top-4 md:top-6 left-10 right-10 max-w-7xl mx-auto z-[9990]
+    rounded-3xl transition-all duration-300 ease-out
+    ${
+      hasScrolled ? 'bg-[#171616] backdrop-blur-md shadow-lg' : 'bg-transparent'
+    }
+  `}
+      >
         <div
           ref={menuRef}
           className="relative flex items-center justify-between"

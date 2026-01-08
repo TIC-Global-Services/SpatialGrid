@@ -39,7 +39,7 @@ const SpatialEngineering = () => {
         <img
           src={iconsPath.VisualEditorDesign}
           alt="VisualEditor"
-          className="relative z-10 max-w-full"
+          className="relative z-10 max-w-full rounded-2xl border-2 border-red-700"
         />
       </div>
     </div>

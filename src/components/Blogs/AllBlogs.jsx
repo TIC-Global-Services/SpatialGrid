@@ -65,7 +65,7 @@ const AllBlogs = () => {
                 {blog.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs px-3 py-1 rounded-full bg-white/90 text-red-600"
+                    className="text-xs px-3 py-1 rounded-full bg-white/10 text-red-500"
                   >
                     {tag}
                   </span>

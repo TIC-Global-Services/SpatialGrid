@@ -17,6 +17,7 @@ const SNAP_TARGETS = [
   1346,
 ];
 
+
 const FRAME_PATH = (i) =>
   `/updated_seq/frames/frame_${String(i + 1).padStart(4, '0')}.webp`;
 

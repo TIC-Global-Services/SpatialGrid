@@ -119,11 +119,11 @@ export default function XRSolutions() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-screen bg-black text-white overflow-hidden"
+      className="relative h-screen  text-white overflow-hidden"
     >
       <div className="h-full flex items-center">
-        <div className="w-full px-8 md:px-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="w-full px-8 md:px-24 pt-10 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-16">
             {/* LEFT TEXT */}
             <div className="relative h-[400px]">
               {content.map((item, i) => (

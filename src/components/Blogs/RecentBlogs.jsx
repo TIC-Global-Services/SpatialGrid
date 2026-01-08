@@ -46,7 +46,7 @@ const RecentBlogs = () => {
               {featured.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs px-3 py-1 rounded-full bg-white/90 text-red-600"
+                  className="text-xs px-3 py-1 rounded-full bg-white/10 text-red-500"
                 >
                   {tag}
                 </span>
@@ -81,7 +81,7 @@ const RecentBlogs = () => {
                     {blog.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-[10px] px-2 py-0.5 rounded-full bg-white/90 text-red-600"
+                        className="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-red-500"
                       >
                         {tag}
                       </span>

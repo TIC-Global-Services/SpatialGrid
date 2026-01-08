@@ -9,6 +9,7 @@ import XRSolutions from '../components/3D_Home/XRSolutions';
 import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import VideoSequenceHero from '../components/3D_Home/SequenceHero';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,12 +17,13 @@ const Home = () => {
   return (
     <div className="bg-black flex flex-col max-w-[100vw] custom-scrollbar">
       <BackgroundWrapper>
-        <CanvasSequenceHero />
+        <VideoSequenceHero />
+        {/* <CanvasSequenceHero /> */}
         <SpatialEngineering />
         <XRSolutions />
         <EnterpriseImpact />
-      </BackgroundWrapper>
       <Companies />
+      </BackgroundWrapper>
       <Testimonials />
       <FAQSection />
     </div>

@@ -23,13 +23,13 @@ const EnterpriseImpact = () => {
   const x = useTransform(
     scrollYProgress,
     [0, 1],
-    isDesktop ? ['0%', '220%'] : ['0%', '60%']
+    isDesktop ? ['0%', '220%'] : ['-50%', '20%']
   );
 
   const y = useTransform(
     scrollYProgress,
     [0, 1],
-    isDesktop ? ['0%', '140%'] : ['0%', '40%']
+    isDesktop ? ['0%', '140%'] : ['20%', '190%']
   );
 
   const scale = useTransform(
@@ -56,7 +56,7 @@ const EnterpriseImpact = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative min-h-screen w-full flex flex-col gap-16 justify-center px-4 md:px-10 py-10 overflow-x-hidden"
+      className="relative min-h-screen w-full flex flex-col gap-16 justify-center px-4 md:px-10 py-10 overflow-hidden"
     >
       {/* HEADER */}
       <div className="max-w-5xl text-center mx-auto space-y-4">
@@ -88,7 +88,7 @@ const EnterpriseImpact = () => {
           <div
             key={idx}
             className={`bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 text-white border border-[#322F2F] flex flex-col items-start gap-4 px-6 py-8 rounded-md h-[250px]
-              ${idx === 1 ? 'mt-32' : idx === 2 ? 'mt-64' : ''}
+              ${idx === 1 ? ' md:mt-32' : idx === 2 ? 'md:mt-64' : ''}
             `}
           >
             <div className="bg-[#262424] px-3 py-2 rounded-md">
