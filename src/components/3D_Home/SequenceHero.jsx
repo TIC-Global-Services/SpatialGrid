@@ -447,14 +447,14 @@ const VideoSequenceHero = () => {
                 <h1 className={`text-white font-bold font-telegraf ${b.headingStyle}`}>
                   {b.title}
                   {b.highlight && (
-                    <span className="text-primary"> {b.highlight}</span>
+                    <span className="text-primary font-telegraf"> {b.highlight}</span>
                   )}
                 </h1>
               )}
               {b.titleParts && (
                 <h1 className={`text-white font-telegraf font-bold ${b.headingStyle}`}>
                   {b.titleParts.map((part, i) => (
-                    <span key={i} className={part.highlight ? 'text-primary' : ''}>
+                    <span key={i} className={part.highlight ? 'text-primary font-telegraf' : ''}>
                       {part.text}
                     </span>
                   ))}
@@ -473,7 +473,7 @@ const VideoSequenceHero = () => {
         >
           <h1 className="text-white font-bold font-telegraf text-4xl md:text-5xl text-center max-w-xl px-4">
             Spatial Grid – A Boundless Frontier for{' '}
-            <span className="text-primary">Immersive Spatial Models.</span>
+            <span className="text-primary font-telegraf">Immersive Spatial Models.</span>
           </h1>
         </div>
 
