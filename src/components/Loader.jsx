@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Grid } from 'ldrs/react';
 import 'ldrs/react/Grid.css';
+
 const Loader = ({ bgColor }) => {
   const [progress, setProgress] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);

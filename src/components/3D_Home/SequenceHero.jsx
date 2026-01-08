@@ -9,15 +9,9 @@ const TOTAL_FRAMES = 1485;
 const SCROLL_MULTIPLIER = 4;
 const OUTRO_SCROLL = 200;
 const IDLE_FRAMES = 119;
-const IDLE_FPS = 30; // Adjust if needed for smoother loop
+const IDLE_FPS = 30;
 /* ========================================== */
 
-const SNAP_TARGETS = [
-  0, 80, 140, 185, 223, 340, 490, 600, 710, 770, 820, 850, 980, 1040, 1285,
-  1346,
-];
-
-/* -------- CONTENT DEFINITIONS -------- */
 const CONTENT = [
   {
     id: '1',
@@ -26,10 +20,9 @@ const CONTENT = [
     title: 'Leading the Future of Immersive ',
     highlight: 'Spatial Intelligence',
     desc: 'The enterprise suite for immersive technologies, powered by Spatial AI- designed to perform across industries.',
-    position:
-      'left-1/2 top-[30%] md:top-[40%] -translate-x-1/2 -translate-y-1/2 ',
-    customStyle: ' items-center justify-center text-center px-4',
-    headingStyle: ' max-w-3xl text-2xl md:text-5xl',
+    position: 'left-1/2 top-[30%] md:top-[40%] -translate-x-1/2 -translate-y-1/2',
+    customStyle: 'items-center justify-center text-center px-4',
+    headingStyle: 'max-w-3xl text-2xl md:text-5xl',
     descStyle: 'text-[#BBBBBB] text-lg max-w-lg',
   },
   {
@@ -37,22 +30,13 @@ const CONTENT = [
     from: 145,
     to: 240,
     titleParts: [
-      {
-        text: 'Spatial Grid is built on Immersive Spatial Models',
-        highlight: true,
-      },
-      {
-        text: ' (ISMs) —advanced multimodal AI systems that replicate real-world spaces and human behavior to power immersive experiences across  ',
-        highlight: false,
-      },
-      {
-        text: 'simulations, extended-reality, and GIS systems.',
-        highlight: true,
-      },
+      { text: 'Spatial Grid is built on Immersive Spatial Models', highlight: true },
+      { text: ' (ISMs) —advanced multimodal AI systems that replicate real-world spaces and human behavior to power immersive experiences across ', highlight: false },
+      { text: 'simulations, extended-reality, and GIS systems.', highlight: true },
     ],
     position: 'left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2',
-    customStyle: ' items-center justify-center text-center ',
-    headingStyle: '  max-w-3xl text-lg md:text-2xl ',
+    customStyle: 'items-center justify-center text-center',
+    headingStyle: 'max-w-3xl text-lg md:text-2xl',
   },
   {
     id: '3',
@@ -62,9 +46,9 @@ const CONTENT = [
     highlight: 'Scale Faster.',
     desc: 'Spatial Grid delivers intelligent XR training platforms for complex, high-risk industries — oil & gas, pharma, agrochem. Adaptive environments, spatial models, and AI ensure mastery before mistakes.',
     position: 'left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2',
-    customStyle: ' items-center justify-center text-center px-4',
-    headingStyle: '  max-w-2xl text-2xl md:text-5xl shadow-xl',
-    descStyle: '  text-white md:max-w-md shadow-xl',
+    customStyle: 'items-center justify-center text-center px-4',
+    headingStyle: 'max-w-2xl text-2xl md:text-5xl shadow-xl',
+    descStyle: 'text-white md:max-w-md shadow-xl',
   },
   {
     id: '4',
@@ -72,9 +56,9 @@ const CONTENT = [
     to: 550,
     title: 'From site tours to ',
     highlight: 'store fronts.',
-    position: ' left-1/2 -translate-x-1/2  top-[25%] ',
-    customStyle: ' items-center justify-start',
-    headingStyle: ' max-w-lg text-2xl md:text-5xl text-center',
+    position: 'left-1/2 -translate-x-1/2 top-[25%]',
+    customStyle: 'items-center justify-start',
+    headingStyle: 'max-w-lg text-2xl md:text-5xl text-center',
   },
   {
     id: '5',
@@ -82,48 +66,45 @@ const CONTENT = [
     to: 910,
     title: 'From Showrooms to ',
     highlight: 'Shelf Space.',
-    position: ' md:left-[5%] top-[15%] md:top-[25%] ',
-    customStyle: ' items-center md:items-start justify-start',
-    headingStyle: ' max-w-lg text-2xl md:text-5xl text-center',
+    position: 'md:left-[5%] top-[15%] md:top-[25%]',
+    customStyle: 'items-center md:items-start justify-start',
+    headingStyle: 'max-w-lg text-2xl md:text-5xl text-center',
   },
   {
     id: '6',
     from: 840,
     to: 930,
     desc: 'Immersive brand journeys now begin in XR. With AI-personalized walkthroughs, product interactions, and layered storytelling, Spatial Grid redefines engagement.',
-    position: ' md:right-[5%] bottom-[10%] ',
-    descStyle: '  text-white max-w-lg text-lg font-medium',
-    customStyle: ' items-end justify-center text-center ',
+    position: 'md:right-[5%] bottom-[10%]',
+    descStyle: 'text-white max-w-lg text-lg font-medium',
+    customStyle: 'items-end justify-center text-center',
   },
   {
     id: '7',
     from: 980,
     to: 1010,
-    title:
-      'Turning Lessons into Spatial Journeys. Beyond the page into the world. See it, feel it, understand it.',
+    title: 'Turning Lessons into Spatial Journeys. Beyond the page into the world. See it, feel it, understand it.',
     position: 'left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2',
-    customStyle: '  justify-center text-center items-center',
-    headingStyle: '  max-w-2xl text-3xl',
+    customStyle: 'justify-center text-center items-center',
+    headingStyle: 'max-w-2xl text-3xl',
   },
   {
     id: '8',
     from: 1157,
     to: 1200,
-    title:
-      'Spatial Grid turns learning into exploration. Whether it’s the beating heart or the stars above, our immersive education modules bring spatial environments into every classroom.',
+    title: "Spatial Grid turns learning into exploration. Whether it's the beating heart or the stars above, our immersive education modules bring spatial environments into every classroom.",
     position: 'left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2',
-    customStyle: '  justify-center text-center items-center',
-    headingStyle: '  max-w-xl text-lg md:text-xl',
+    customStyle: 'justify-center text-center items-center',
+    headingStyle: 'max-w-xl text-lg md:text-xl',
   },
   {
     id: '9',
     from: 1230,
     to: 1400,
-    title:
-      'Digital Twins, Simulating Ops- from cockpits to command centers, immersive superiority for Air, Land, Water and Space',
-    position: 'left-1/2 -translate-x-1/2 bottom-[40%] ',
-    customStyle: '  justify-center text-center items-center',
-    headingStyle: '  max-w-3xl text-2xl md:text-3xl',
+    title: 'Digital Twins, Simulating Ops- from cockpits to command centers, immersive superiority for Air, Land, Water and Space',
+    position: 'left-1/2 -translate-x-1/2 bottom-[40%]',
+    customStyle: 'justify-center text-center items-center',
+    headingStyle: 'max-w-3xl text-2xl md:text-3xl',
   },
 ];
 
@@ -131,34 +112,39 @@ const VideoSequenceHero = () => {
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
   const durationRef = useRef(0);
-  const rafRef = useRef(null);
-  const idleRafRef = useRef(null);
   const contentRefs = useRef({});
-  const idleAnimationRef = useRef(null);
+  const idleRafRef = useRef(null);
+  const scrollTriggerRef = useRef(null);
+  const targetFrameRef = useRef(0);
+  const currentFrameRef = useRef(0);
+  const isSeekingRef = useRef(false);
+  const seekTimeoutRef = useRef(null);
+  
   const [frame, setFrame] = useState(0);
   const [videoReady, setVideoReady] = useState(false);
   const [progress, setProgress] = useState(0);
   const [isOutro, setIsOutro] = useState(false);
-  const OUTRO_CONTENT_ID = 'outro';
   const [isMobile, setIsMobile] = useState(false);
   const [videoSrc, setVideoSrc] = useState('/new_seq/web.mp4');
 
+  // Detect mobile device
   useEffect(() => {
     const checkMobile = () => {
-      const mobile =
-        window.matchMedia('(max-width: 768px)').matches ||
-        /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
+      const mobile = window.matchMedia('(max-width: 768px)').matches || 
+                     /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
       setIsMobile(mobile);
-      setVideoSrc(mobile ? 'https://ik.imagekit.io/99y1fc9mh/SpatialGrid/mobile.mp4' : 'https://ik.imagekit.io/99y1fc9mh/SpatialGrid/web.mp4');
+      setVideoSrc(mobile ? 
+        'https://ik.imagekit.io/99y1fc9mh/SpatialGrid/mobile.mp4' : 
+        'https://ik.imagekit.io/99y1fc9mh/SpatialGrid/web.mp4'
+      );
     };
 
     checkMobile();
     window.addEventListener('resize', checkMobile);
-
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  // Reset when video source changes
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -166,12 +152,14 @@ const VideoSequenceHero = () => {
     setVideoReady(false);
     setFrame(0);
     setIsOutro(false);
+    currentFrameRef.current = 0;
+    targetFrameRef.current = 0;
 
     video.pause();
     video.load();
   }, [videoSrc]);
 
-  /* ================= VIDEO LOADING ================= */
+  // Video loading
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -194,23 +182,60 @@ const VideoSequenceHero = () => {
       setVideoReady(true);
     };
 
+    const onSeeked = () => {
+      isSeekingRef.current = false;
+    };
+
     video.addEventListener('loadedmetadata', onLoadedMetadata);
     video.addEventListener('progress', onProgress);
     video.addEventListener('canplay', onCanPlay);
+    video.addEventListener('seeked', onSeeked);
 
     return () => {
       video.removeEventListener('loadedmetadata', onLoadedMetadata);
       video.removeEventListener('progress', onProgress);
       video.removeEventListener('canplay', onCanPlay);
+      video.removeEventListener('seeked', onSeeked);
     };
   }, []);
 
-  /* ================= SCROLL + PING-PONG IDLE LOOP ================= */
+  // Smooth frame seeking with debouncing
+  const seekToFrame = (targetFrame) => {
+    const video = videoRef.current;
+    if (!video || !durationRef.current) return;
+
+    targetFrameRef.current = targetFrame;
+
+    // Clear any pending seek
+    if (seekTimeoutRef.current) {
+      clearTimeout(seekTimeoutRef.current);
+    }
+
+    // Debounce seeking on mobile for better performance
+    const seekDelay = isMobile ? 16 : 0;
+
+    seekTimeoutRef.current = setTimeout(() => {
+      if (isSeekingRef.current) return;
+
+      const targetTime = Math.min(
+        Math.max((targetFrame / (TOTAL_FRAMES - 1)) * durationRef.current, 0.001),
+        durationRef.current - 0.04
+      );
+
+      // Only seek if video is ready and time difference is significant
+      if (video.readyState >= 2 && Math.abs(video.currentTime - targetTime) > 0.01) {
+        isSeekingRef.current = true;
+        video.currentTime = targetTime;
+      }
+
+      currentFrameRef.current = targetFrame;
+      setFrame(targetFrame);
+    }, seekDelay);
+  };
+
+  // Idle animation (ping-pong at top)
   useEffect(() => {
     if (!videoReady) return;
-
-    const video = videoRef.current;
-    const duration = durationRef.current;
 
     let currentIdleFrame = 0;
     let direction = 1;
@@ -218,7 +243,6 @@ const VideoSequenceHero = () => {
 
     const startIdleAnimation = () => {
       if (idleRafRef.current) return;
-      idleAnimationRef.current = true;
 
       const animate = (time) => {
         if (!lastIdleTime) lastIdleTime = time;
@@ -234,10 +258,7 @@ const VideoSequenceHero = () => {
             direction = 1;
           }
 
-          const targetTime = (currentIdleFrame / (TOTAL_FRAMES - 1)) * duration;
-          video.currentTime = Math.max(targetTime, 0.001);
-
-          setFrame(currentIdleFrame);
+          seekToFrame(currentIdleFrame);
           lastIdleTime = time;
         }
 
@@ -252,84 +273,118 @@ const VideoSequenceHero = () => {
         cancelAnimationFrame(idleRafRef.current);
         idleRafRef.current = null;
       }
-      idleAnimationRef.current = false;
     };
 
-    const trigger = ScrollTrigger.create({
-      id: 'canvas-seq',
+    // Start idle on mount
+    startIdleAnimation();
+
+    return stopIdleAnimation;
+  }, [videoReady, isMobile]);
+
+  // Main scroll animation
+  useEffect(() => {
+    if (!videoReady) return;
+
+    const video = videoRef.current;
+    const duration = durationRef.current;
+
+    const stopIdleAnimation = () => {
+      if (idleRafRef.current) {
+        cancelAnimationFrame(idleRafRef.current);
+        idleRafRef.current = null;
+      }
+    };
+
+    scrollTriggerRef.current = ScrollTrigger.create({
       trigger: sectionRef.current,
       start: 'top top',
       end: `+=${TOTAL_FRAMES * SCROLL_MULTIPLIER + OUTRO_SCROLL}`,
-      scrub: true,
+      scrub: 0.8, // Smooth scrubbing
       pin: true,
       pinSpacing: true,
+      anticipatePin: 1,
       invalidateOnRefresh: true,
       refreshPriority: 100,
 
       onUpdate: (self) => {
         const scrollProgress = self.progress;
         const totalScrollFrames = TOTAL_FRAMES * SCROLL_MULTIPLIER;
-        const scrollPosition =
-          scrollProgress * (totalScrollFrames + OUTRO_SCROLL);
+        const scrollPosition = scrollProgress * (totalScrollFrames + OUTRO_SCROLL);
 
-        // ===== OUTRO PHASE =====
+        // OUTRO PHASE
         if (scrollPosition >= totalScrollFrames) {
           setIsOutro(true);
-
-          // Lock video on last frame
-          video.currentTime = duration - 0.04;
+          stopIdleAnimation();
+          
+          if (video && duration) {
+            video.currentTime = duration - 0.04;
+          }
           setFrame(TOTAL_FRAMES - 1);
-
-          // Stop idle animation permanently
-          if (idleRafRef.current) stopIdleAnimation();
-
           return;
         }
 
-        // ===== MAIN PHASE =====
+        // MAIN PHASE
         setIsOutro(false);
 
         const frameProgress = scrollPosition / totalScrollFrames;
-        const targetFrame = Math.floor(frameProgress * (TOTAL_FRAMES - 1));
+        const targetFrame = Math.round(frameProgress * (TOTAL_FRAMES - 1));
 
-        // Top idle logic
-        if (targetFrame === 0) {
-          if (!idleRafRef.current) startIdleAnimation();
-          setFrame(0);
+        // Idle at top
+        if (targetFrame <= 1) {
+          if (!idleRafRef.current) {
+            // Restart idle animation
+            let currentIdleFrame = 0;
+            let direction = 1;
+            let lastIdleTime = 0;
+
+            const animate = (time) => {
+              if (!lastIdleTime) lastIdleTime = time;
+
+              if (time - lastIdleTime >= 1000 / IDLE_FPS) {
+                currentIdleFrame += direction;
+
+                if (currentIdleFrame >= IDLE_FRAMES - 1) {
+                  currentIdleFrame = IDLE_FRAMES - 1;
+                  direction = -1;
+                } else if (currentIdleFrame <= 0) {
+                  currentIdleFrame = 0;
+                  direction = 1;
+                }
+
+                seekToFrame(currentIdleFrame);
+                lastIdleTime = time;
+              }
+
+              idleRafRef.current = requestAnimationFrame(animate);
+            };
+
+            idleRafRef.current = requestAnimationFrame(animate);
+          }
           return;
         }
 
-        if (idleRafRef.current) stopIdleAnimation();
+        // Stop idle when scrolling
+        stopIdleAnimation();
 
-        if (targetFrame !== frame) {
-          setFrame(targetFrame);
-
-          const targetTime = Math.min(
-            Math.max((targetFrame / (TOTAL_FRAMES - 1)) * duration, 0.001),
-            duration - 0.04
-          );
-
-          cancelAnimationFrame(rafRef.current);
-          rafRef.current = requestAnimationFrame(() => {
-            if (video.readyState >= 2) {
-              video.currentTime = targetTime;
-            }
-          });
+        // Seek to frame
+        if (targetFrame !== currentFrameRef.current) {
+          seekToFrame(targetFrame);
         }
       },
     });
 
-    // Start idle loop on load
-    startIdleAnimation();
-
     return () => {
-      cancelAnimationFrame(rafRef.current);
+      if (scrollTriggerRef.current) {
+        scrollTriggerRef.current.kill();
+      }
       stopIdleAnimation();
-      trigger.kill();
+      if (seekTimeoutRef.current) {
+        clearTimeout(seekTimeoutRef.current);
+      }
     };
-  }, [videoReady]);
+  }, [videoReady, isMobile]);
 
-  /* ================= TEXT FADE ================= */
+  // Text fade animations
   useEffect(() => {
     if (isOutro) return;
 
@@ -386,55 +441,47 @@ const VideoSequenceHero = () => {
             <div
               key={b.id}
               ref={(el) => (contentRefs.current[b.id] = el)}
-              className={`absolute flex flex-col  opacity-0 w-full px-2 ${b.customStyle} ${b.position}`}
+              className={`absolute flex flex-col opacity-0 w-full px-2 ${b.customStyle} ${b.position}`}
             >
               {b.title && (
-                <h1
-                  className={`text-white font-telegraf font-extrabold ${b.headingStyle}`}
-                >
+                <h1 className={`text-white font-bold font-telegraf ${b.headingStyle}`}>
                   {b.title}
                   {b.highlight && (
-                    <span className="text-primary font-telegraf">
-                      {' '}
-                      {b.highlight}
-                    </span>
+                    <span className="text-primary"> {b.highlight}</span>
                   )}
                 </h1>
               )}
               {b.titleParts && (
-                <h1
-                  className={`text-white font-telegraf font-extrabold ${b.headingStyle}`}
-                >
+                <h1 className={`text-white font-telegraf font-bold ${b.headingStyle}`}>
                   {b.titleParts.map((part, i) => (
-                    <span
-                      key={i}
-                      className={part.highlight ? 'text-primary' : ''}
-                    >
+                    <span key={i} className={part.highlight ? 'text-primary' : ''}>
                       {part.text}
                     </span>
                   ))}
                 </h1>
               )}
-
-              {b.desc && <p className={` py-2 ${b.descStyle}`}>{b.desc}</p>}
+              {b.desc && <p className={`py-2 ${b.descStyle}`}>{b.desc}</p>}
             </div>
           ))}
         </div>
 
+        {/* OUTRO TEXT */}
         <div
           className={`absolute inset-0 z-30 flex items-center justify-center transition-opacity duration-500 ${
             isOutro ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         >
-          <h1 className="text-white font-telegraf font-extrabold text-4xl md:text-5xl text-center max-w-xl px-4">
+          <h1 className="text-white font-bold font-telegraf text-4xl md:text-5xl text-center max-w-xl px-4">
             Spatial Grid – A Boundless Frontier for{' '}
             <span className="text-primary">Immersive Spatial Models.</span>
           </h1>
         </div>
 
         {/* DEBUG */}
-        <div className="absolute bottom-6 left-6 text-white text-sm opacity-60">
-          Frame: {frame} {idleAnimationRef.current ? '(Idle Loop)' : ''}
+        <div className="absolute bottom-6 left-6 text-white text-sm opacity-60 bg-black/50 px-2 py-1 rounded">
+          Frame: {frame} / {TOTAL_FRAMES}
+          {idleRafRef.current ? ' (Idle)' : ''}
+          {isSeekingRef.current ? ' (Seeking)' : ''}
         </div>
       </section>
     </>
